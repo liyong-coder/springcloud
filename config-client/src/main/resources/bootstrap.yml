@@ -1,0 +1,44 @@
+server:
+  port: 8881
+
+spring:
+  application:
+    name: CONFIG-CLIENT
+  profiles:
+    active: dev
+  cloud:
+    config:
+      profile: ${spring.profiles.active}
+      name: ${spring.application.name}
+      enabled: true
+      label: master
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVICE
+#      username: user
+#      password: root123456
+#    bus:
+#      enabled: true
+#      trace:
+#        enabled: true
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: guest
+#    password: guest
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: bus-refresh
+
+
+
+
