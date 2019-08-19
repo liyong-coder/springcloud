@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @SpringBootApplication
 @EnableEurekaClient
-@RefreshScope
+//@RefreshScope
 public class ServiceHiApplication {
 
     public static void main(String[] args) {
