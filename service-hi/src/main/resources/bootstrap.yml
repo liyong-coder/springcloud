@@ -1,20 +1,14 @@
-server:
-  port: 8763
-  #port: 8762
-
 spring:
   application:
     name: SERVICE-HI
   profiles:
-    active: local
+    active: dev
   cloud:
     config:
       profile: ${spring.profiles.active}
+      uri: ["http://127.0.0.1:8888"]
       name: ${spring.application.name}
       enabled: true
-      discovery:
-        enabled: false
-        service-id: CONFIG-SERVICE
 
 
 

@@ -1,0 +1,32 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: CONFIG-SERVER
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/liyong-coder/config-repo.git
+          username:
+          password:
+          # 通配符配置，
+          # 1. 从 common 文件夹获取通用配置，
+          # 2. 根据 {application} 获取配置
+          search-paths:
+            - common
+            - '{application}'
+          #            - '{application}/{profile}'
+          # basedir: /Users/admin/code/myProjects/java/imooc/SpringCloud_Sell/config/basedir
+    bus:
+      refresh:
+        enabled: true
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: SpringCloud-bus
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

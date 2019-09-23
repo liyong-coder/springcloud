@@ -12,7 +12,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.3.RELEASE</version>
+        <version>2.0.6.RELEASE</version>
         <relativePath/>
     </parent>
 
@@ -24,6 +24,9 @@
         <module>config-server</module>
         <module>config-client</module>
         <module>gateway</module>
+        <module>hystrix</module>
+        <module>user-service</module>
+        <module>zipkin-server</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

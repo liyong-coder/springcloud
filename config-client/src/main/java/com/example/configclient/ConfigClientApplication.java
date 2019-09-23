@@ -27,14 +27,11 @@ public class ConfigClientApplication {
         return foo;
     }
 
-    @Value("${username}")
-    String username;
-
-    @Value("${password}")
-    String password;
+    @Value("${profile}")
+    String profile;
 
     @RequestMapping("/get")
-    public String getUserAndPass(){
-        return "用户名:"+username+",密码:"+password;
+    public String getProfile(){
+        return profile;
     }
 }
